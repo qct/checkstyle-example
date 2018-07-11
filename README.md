@@ -1,14 +1,14 @@
 ## Java Code Style
 
-这个一个Java code style 样例工程，使用maven 组织的java 项目都应参照。
+这个一个Java code style 样例，使用maven-checkstyle-plugin检查代码规范。
 
 使用步骤：
 
 1.IntelliJ IDEA 中使用 [intellij-java-google-style.xml](attachment/intellij-java-google-style.xml)，此版本在官方版本基础上把`java` 和 `xml`中缩进改为4。如图：
 
-![code-style](code-style.jpg)
+![code-style](code-style.png)
 
-在开发过程中，使用Reformat Code(默认快捷键 Ctrl+Alt+L) 可自动格式化代码。
+在开发过程中，使用Reformat Code(默认快捷键 Ctrl+Alt+L, MacOS: Command+Option+L) 可自动格式化代码。
 
 2.检查，在项目中使用`checkstyle-maven-plugin` 自动检查格式：
 
