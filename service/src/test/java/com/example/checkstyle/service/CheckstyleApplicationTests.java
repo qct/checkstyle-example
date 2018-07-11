@@ -1,4 +1,4 @@
-package com.example.checkstyle;
+package com.example.checkstyle.service;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

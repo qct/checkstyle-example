@@ -7,7 +7,7 @@
     <groupId>com.example</groupId>
     <artifactId>checkstyle-example</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <packaging>jar</packaging>
+    <packaging>pom</packaging>
 
     <name>checkstyle-example</name>
     <description>Demo project for Spring Boot</description>
@@ -19,6 +19,11 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
+    <modules>
+        <module>core</module>
+        <module>service</module>
+    </modules>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -29,24 +34,6 @@
         <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
         <checkstyle.version>8.10</checkstyle.version>
     </properties>
-
-    <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
 
     <build>
         <pluginManagement>
@@ -95,4 +82,18 @@
             </plugin>
         </plugins>
     </build>
+
+    <profiles>
+        <profile>
+            <id>activate-in-module</id>
+            <activation>
+                <file>
+                    <exists>${basedir}/../src/checkstyle/google_checks.xml</exists>
+                </file>
+            </activation>
+            <properties>
+                <checkstyleDir>${basedir}/../src/checkstyle</checkstyleDir>
+            </properties>
+        </profile>
+    </profiles>
 </project>
