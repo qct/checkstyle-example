@@ -28,18 +28,17 @@
         <configLocation>src/checkstyle/google_checks.xml</configLocation>
         <!--<suppressionsLocation>src/checkstyle/checkstyle-suppressions.xml</suppressionsLocation>-->
         <!--<headerLocation>${project.basedir}src/checkstyle/checkstyle-header.txt</headerLocation>-->
+        <skip>${disable.checks}</skip>
+        <encoding>UTF-8</encoding>
+        <consoleOutput>true</consoleOutput>
+        <failOnViolation>true</failOnViolation>
+        <violationSeverity>warning</violationSeverity>
+        <includeTestSourceDirectory>true</includeTestSourceDirectory>
     </configuration>
     <executions>
         <execution>
             <id>checkstyle-validation</id>
             <phase>validate</phase>
-            <configuration>
-                <skip>${disable.checks}</skip>
-                <encoding>UTF-8</encoding>
-                <consoleOutput>true</consoleOutput>
-                <failOnViolation>true</failOnViolation>
-                <includeTestSourceDirectory>true</includeTestSourceDirectory>
-            </configuration>
             <goals>
                 <goal>check</goal>
             </goals>
