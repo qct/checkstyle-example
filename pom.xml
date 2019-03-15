@@ -32,7 +32,7 @@
         <disable.checks>false</disable.checks>
         <checkstyleDir>${basedir}/src/checkstyle</checkstyleDir>
         <maven-checkstyle-plugin.version>3.0.0</maven-checkstyle-plugin.version>
-        <checkstyle.version>8.10</checkstyle.version>
+        <checkstyle.version>8.18</checkstyle.version>
     </properties>
 
     <build>
