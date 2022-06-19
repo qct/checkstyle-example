@@ -1,5 +1,8 @@
 package com.example.checkstyle.core;
 
+/**
+ * SomeCore.
+ */
 public class SomeCore {
 
     private long id;
