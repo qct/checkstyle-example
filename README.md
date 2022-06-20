@@ -2,6 +2,14 @@
 
 这个一个Java code style 样例，使用maven-checkstyle-plugin检查代码规范。
 
+**Update on 2022/6/20**: Prefer `fmt-maven-plugin` & `spotless-maven-plugin`.
+
+* fmt-maven-plugin:   
+  check: `mvn clean com.spotify.fmt:fmt-maven-plugin:check`   
+  format: `mvn clean com.spotify.fmt:fmt-maven-plugin:format` 
+* spotless-maven-plugin:  
+  
+
 使用步骤：
 
 1.IntelliJ IDEA 中使用 [intellij-java-google-style.xml](attachment/intellij-java-google-style.xml)，此版本在官方版本基础上把`java` 和 `xml`中缩进改为4。如图：
