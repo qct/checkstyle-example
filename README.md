@@ -8,7 +8,8 @@
   check: `mvn clean com.spotify.fmt:fmt-maven-plugin:check`   
   format: `mvn clean com.spotify.fmt:fmt-maven-plugin:format` 
 * spotless-maven-plugin:  
-  
+  check: `mvn clean spotless:check`  
+  apply: `mvn clean spotless:apply`
 
 使用步骤：
 
