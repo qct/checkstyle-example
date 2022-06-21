@@ -131,12 +131,12 @@
                         </includes>
                         <!-- no need to specify files, inferred automatically, but you can if you want -->
                         <!-- apply a specific flavor of google-java-format and reflow long strings -->
-                        <googleJavaFormat>
+                        <!--<googleJavaFormat>
                             <version>1.15.0</version>
                             <style>GOOGLE</style>
                             <reflowLongStrings>true</reflowLongStrings>
                         </googleJavaFormat>
-                        <!-- Tricky here to indent with 4 spaces-->
+                        &lt;!&ndash; Tricky here to indent with 4 spaces&ndash;&gt;
                         <indent>
                             <tabs>true</tabs>
                             <spacesPerTab>2</spacesPerTab>
@@ -144,7 +144,10 @@
                         <indent>
                             <spaces>true</spaces>
                             <spacesPerTab>4</spacesPerTab>
-                        </indent>
+                        </indent>-->
+                        <palantirJavaFormat>
+                            <version>2.24.0</version>
+                        </palantirJavaFormat>
                     </java>
                 </configuration>
             </plugin>
