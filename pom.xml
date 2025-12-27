@@ -34,6 +34,21 @@
         <checkstyle.version>12.3.0</checkstyle.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.42</version>
+            </dependency>
+            <dependency>
+                <groupId>com.example</groupId>
+                <artifactId>core</artifactId>
+                <version>0.0.1-SNAPSHOT</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <build>
         <pluginManagement>
             <plugins>
@@ -145,6 +160,8 @@
                             <spacesPerTab>4</spacesPerTab>
                         </indent>-->
                         <palantirJavaFormat>
+                            <style>GOOGLE</style>
+                            <formatJavadoc>true</formatJavadoc>
                             <version>2.83.0</version>
                         </palantirJavaFormat>
                     </java>
